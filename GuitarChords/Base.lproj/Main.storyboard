@@ -9,7 +9,7 @@
         <!--Title View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TitleViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TitleViewController" customModule="GuitarChords" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,17 +17,47 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GuitarChords" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6b-46-Ihu">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOG-4G-fyY">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDB-60-lCK">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMm-Ke-lfg">
+                                <state key="normal" title="Get Started"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="n6b-46-Ihu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KHs-SY-PhJ"/>
+                            <constraint firstItem="GOG-4G-fyY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KRz-XC-EX9"/>
+                            <constraint firstItem="hDB-60-lCK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MIk-Ff-sqh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GOG-4G-fyY" secondAttribute="bottom" constant="20" id="MnH-U0-c80"/>
+                            <constraint firstItem="hDB-60-lCK" firstAttribute="top" secondItem="n6b-46-Ihu" secondAttribute="bottom" constant="8" id="WeA-dy-DSG"/>
+                            <constraint firstItem="vMm-Ke-lfg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hce-tU-jaH"/>
+                            <constraint firstItem="vMm-Ke-lfg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hhd-JJ-D18"/>
+                            <constraint firstItem="n6b-46-Ihu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="xDc-uq-7t1"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="143"/>
+            <point key="canvasLocation" x="140" y="142.57871064467767"/>
         </scene>
-        <!--View Controller-->
+        <!--Chart View Controller-->
         <scene sceneID="S8G-3H-raR">
             <objects>
-                <viewController id="ZKh-55-Nxp" sceneMemberID="viewController">
+                <viewController id="ZKh-55-Nxp" customClass="ChartViewController" customModule="GuitarChords" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nBR-zV-SO2"/>
                         <viewControllerLayoutGuide type="bottom" id="BLi-TN-p4o"/>
@@ -42,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="935" y="137"/>
         </scene>
-        <!--View Controller-->
+        <!--Selection View Controller-->
         <scene sceneID="Pqh-UK-H0k">
             <objects>
-                <viewController id="P72-LC-RuW" sceneMemberID="viewController">
+                <viewController id="P72-LC-RuW" customClass="SelectionViewController" customModule="GuitarChords" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ex1-St-BV5"/>
                         <viewControllerLayoutGuide type="bottom" id="tfc-9f-klX"/>

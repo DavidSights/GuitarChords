@@ -17,6 +17,7 @@
 		9A67EE161DAF2272007BA992 /* GuitarChordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A67EE151DAF2272007BA992 /* GuitarChordsUITests.swift */; };
 		9A67EE261DAF2311007BA992 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A67EE251DAF2311007BA992 /* SelectionViewController.swift */; };
 		9A67EE281DAF231B007BA992 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A67EE271DAF231B007BA992 /* ChartViewController.swift */; };
+		9A67EE2A1DAF237F007BA992 /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A67EE291DAF237F007BA992 /* Chord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9A67EE171DAF2272007BA992 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A67EE251DAF2311007BA992 /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		9A67EE271DAF231B007BA992 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		9A67EE291DAF237F007BA992 /* Chord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				9A67EDF21DAF2272007BA992 /* AppDelegate.swift */,
-				9A67EE231DAF2295007BA992 /* Controllers */,
+				9A67EE291DAF237F007BA992 /* Chord.swift */,
 				9A67EE241DAF22B8007BA992 /* Views */,
+				9A67EE231DAF2295007BA992 /* Controllers */,
 				9A67EDFC1DAF2272007BA992 /* Assets.xcassets */,
 				9A67EE011DAF2272007BA992 /* Info.plist */,
 				9A67EDF91DAF2272007BA992 /* GuitarChords.xcdatamodeld */,
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A67EE2A1DAF237F007BA992 /* Chord.swift in Sources */,
 				9A67EDF51DAF2272007BA992 /* TitleViewController.swift in Sources */,
 				9A67EE261DAF2311007BA992 /* SelectionViewController.swift in Sources */,
 				9A67EDFB1DAF2272007BA992 /* GuitarChords.xcdatamodeld in Sources */,
