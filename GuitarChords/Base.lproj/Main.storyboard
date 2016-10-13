@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xa3-ap-vBM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -49,10 +49,14 @@
                             <constraint firstItem="n6b-46-Ihu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="xDc-uq-7t1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3uE-Ea-Fel"/>
+                    <connections>
+                        <segue destination="ZKh-55-Nxp" kind="show" identifier="SelectionViewControllerSegueIdentifier" id="7W8-4I-R4D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="142.57871064467767"/>
+            <point key="canvasLocation" x="1032.8" y="135.38230884557723"/>
         </scene>
         <!--Chart View Controller-->
         <scene sceneID="S8G-3H-raR">
@@ -67,15 +71,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="P72-LC-RuW" kind="show" id="i4e-x1-kmu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4HD-8v-g05" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="935" y="137"/>
+            <point key="canvasLocation" x="1938" y="135"/>
         </scene>
         <!--Selection View Controller-->
         <scene sceneID="Pqh-UK-H0k">
             <objects>
-                <viewController id="P72-LC-RuW" customClass="SelectionViewController" customModule="GuitarChords" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="P72-LC-RuW" customClass="SelectionViewController" customModule="ChartViewControllerSegueIdentifier" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ex1-St-BV5"/>
                         <viewControllerLayoutGuide type="bottom" id="tfc-9f-klX"/>
@@ -88,7 +95,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gB0-on-Zya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1690" y="137"/>
+            <point key="canvasLocation" x="2847" y="135"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DjT-Oc-jUc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Xa3-ap-vBM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GD2-V5-aH0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="744-5A-aBH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvi-Ne-Jls" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="135.38230884557723"/>
         </scene>
     </scenes>
 </document>
