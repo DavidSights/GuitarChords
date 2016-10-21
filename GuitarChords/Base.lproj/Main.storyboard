@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xa3-ap-vBM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Title View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TitleViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TitleViewController" customModule="GuitarChords" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,17 +18,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOG-4G-fyY">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMm-Ke-lfg">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="l8j-xC-dyL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hxt-Nu-zaD"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guitarChordsLogo" translatesAutoresizingMaskIntoConstraints="NO" id="JPl-sx-Wbs">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="TbJ-NQ-g65"/>
+                                    <constraint firstAttribute="height" constant="300" id="eTR-dg-q4E"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vMm-Ke-lfg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="3Ut-Wh-R9P"/>
+                            <constraint firstItem="GOG-4G-fyY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KRz-XC-EX9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GOG-4G-fyY" secondAttribute="bottom" constant="16" id="MnH-U0-c80"/>
+                            <constraint firstItem="GOG-4G-fyY" firstAttribute="top" secondItem="vMm-Ke-lfg" secondAttribute="bottom" constant="16" id="e9Y-RC-FMQ"/>
+                            <constraint firstItem="JPl-sx-Wbs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gib-y6-i2x"/>
+                            <constraint firstItem="JPl-sx-Wbs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mTh-ZB-HR7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vMm-Ke-lfg" secondAttribute="trailing" constant="16" id="rfH-Iw-b7u"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3uE-Ea-Fel"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="GOG-4G-fyY" id="1Mw-ya-a8f"/>
+                        <outlet property="getStartedButton" destination="vMm-Ke-lfg" id="GOc-sa-pQX"/>
+                        <segue destination="ZKh-55-Nxp" kind="show" identifier="SelectionViewControllerSegueIdentifier" id="7W8-4I-R4D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="143"/>
+            <point key="canvasLocation" x="1032.8" y="135.38230884557723"/>
         </scene>
-        <!--View Controller-->
+        <!--Chart View Controller-->
         <scene sceneID="S8G-3H-raR">
             <objects>
-                <viewController id="ZKh-55-Nxp" sceneMemberID="viewController">
+                <viewController id="ZKh-55-Nxp" customClass="ChartViewController" customModule="GuitarChords" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nBR-zV-SO2"/>
                         <viewControllerLayoutGuide type="bottom" id="BLi-TN-p4o"/>
@@ -37,15 +76,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="P72-LC-RuW" kind="show" id="i4e-x1-kmu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4HD-8v-g05" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="935" y="137"/>
+            <point key="canvasLocation" x="1938" y="135"/>
         </scene>
-        <!--View Controller-->
+        <!--Selection View Controller-->
         <scene sceneID="Pqh-UK-H0k">
             <objects>
-                <viewController id="P72-LC-RuW" sceneMemberID="viewController">
+                <viewController id="P72-LC-RuW" customClass="SelectionViewController" customModule="ChartViewControllerSegueIdentifier" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ex1-St-BV5"/>
                         <viewControllerLayoutGuide type="bottom" id="tfc-9f-klX"/>
@@ -58,7 +100,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gB0-on-Zya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1690" y="137"/>
+            <point key="canvasLocation" x="2847" y="135"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DjT-Oc-jUc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Xa3-ap-vBM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GD2-V5-aH0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="744-5A-aBH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvi-Ne-Jls" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="135.38230884557723"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="guitarChordsLogo" width="448" height="448"/>
+    </resources>
 </document>

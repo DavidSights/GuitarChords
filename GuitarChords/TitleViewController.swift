@@ -8,18 +8,48 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TitleViewController: UIViewController, UIGestureRecognizerDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    // MARK: - Properties 
+
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: - IBOutlets
+
+    @IBOutlet weak var getStartedButton: UIButton!
+    @IBOutlet weak var authorLabel: UILabel!
+
+    // MARK: - View Lifecycle
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.setupUI()
     }
 
+    // MARK: - IBActions
 
+    @IBAction func startButtonPressed(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: SegueIdentifier.selectionViewController, sender: nil)
+    }
+
+    // MARK: - Convenience Methods
+
+    private func setupUI() {
+
+        self.view.backgroundColor = GCHColor.backgroundColor
+
+        self.getStartedButton.backgroundColor = GCHColor.buttonColor
+        self.getStartedButton.setTitleColor(GCHColor.backgroundColor, for: .normal)
+        self.getStartedButton.roundCorners()
+
+        self.authorLabel.text = "Made by David Seitz Jr"
+        self.authorLabel.textColor = GCHColor.buttonColor
+
+        // Enable swiping back to previous view.
+
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+    }
 }
-
