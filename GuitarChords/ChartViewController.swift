@@ -10,4 +10,16 @@ import UIKit
 
 class ChartViewController: UIViewController {
 
+    // MARK: - View Lifecycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setupUI()
+    }
+
+    // MARK: - Convenience Methods
+
+    private func setupUI() {
+        self.view.backgroundColor = GCHColor.backgroundColor
+    }
 }
