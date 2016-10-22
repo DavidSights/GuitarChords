@@ -30,7 +30,14 @@ class TitleViewController: UIViewController, UIGestureRecognizerDelegate {
 
     // MARK: - IBActions
 
+    @IBAction func startButtonTouchDown(_ sender: AnyObject) {
+        self.getStartedButton.backgroundColor = GCHColor.darkBrown
+    }
+
     @IBAction func startButtonPressed(_ sender: AnyObject) {
+
+        self.getStartedButton.backgroundColor = GCHColor.buttonColor
+
         self.performSegue(withIdentifier: SegueIdentifier.selectionViewController, sender: nil)
     }
 

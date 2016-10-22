@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,12 +25,13 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMm-Ke-lfg">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="l8j-xC-dyL"/>
+                                    <constraint firstAttribute="height" constant="60" id="DMF-dA-mbo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hxt-Nu-zaD"/>
+                                    <action selector="startButtonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Ada-4r-xhS"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guitarChordsLogo" translatesAutoresizingMaskIntoConstraints="NO" id="JPl-sx-Wbs">
@@ -43,13 +43,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vMm-Ke-lfg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="3Ut-Wh-R9P"/>
                             <constraint firstItem="GOG-4G-fyY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KRz-XC-EX9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GOG-4G-fyY" secondAttribute="bottom" constant="16" id="MnH-U0-c80"/>
-                            <constraint firstItem="GOG-4G-fyY" firstAttribute="top" secondItem="vMm-Ke-lfg" secondAttribute="bottom" constant="16" id="e9Y-RC-FMQ"/>
+                            <constraint firstItem="vMm-Ke-lfg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tot-TK-nzt"/>
+                            <constraint firstItem="vMm-Ke-lfg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="dF7-FX-BHT"/>
                             <constraint firstItem="JPl-sx-Wbs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gib-y6-i2x"/>
+                            <constraint firstAttribute="trailing" secondItem="vMm-Ke-lfg" secondAttribute="trailing" constant="16" id="h7J-KG-cMW"/>
                             <constraint firstItem="JPl-sx-Wbs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mTh-ZB-HR7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vMm-Ke-lfg" secondAttribute="trailing" constant="16" id="rfH-Iw-b7u"/>
+                            <constraint firstItem="GOG-4G-fyY" firstAttribute="top" secondItem="vMm-Ke-lfg" secondAttribute="bottom" constant="16" id="n42-k0-0On"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3uE-Ea-Fel"/>
@@ -74,6 +75,41 @@
                     <view key="view" contentMode="scaleToFill" id="8VH-NM-DwN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M20-oU-e7q">
+                                <frame key="frameInset" minX="164" minY="607" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TUu-Wh-8VP">
+                                <frame key="frameInset" minX="67" minY="291" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MB7-1J-Yan">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="z01-uf-kz2">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kji-Ra-Q6O">
+                                <frame key="frameInset" minX="164" minY="126" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>

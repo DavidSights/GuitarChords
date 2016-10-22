@@ -31,4 +31,9 @@ struct GCHColor {
                                                      g: 184,
                                                      b: 162,
                                                      a: 1)
+
+    static let darkBrown = UIColor.color(r: 35,
+                                         g: 23,
+                                         b: 16,
+                                         a: 1)
 }
