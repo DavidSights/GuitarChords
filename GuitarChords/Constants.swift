@@ -17,23 +17,19 @@ struct SegueIdentifier {
 
 struct GCHColor {
 
-    static let backgroundColor = UIColor.color(r: 240,
-                                               g: 224,
-                                               b: 208,
-                                               a: 1)
+    static let backgroundColor = UIColor.rgbColor(r: 240,
+                                                  g: 224,
+                                                  b: 208)
 
-    static let buttonColor = UIColor.color(r: 175,
-                                           g: 150,
-                                           b: 119,
-                                           a: 1)
+    static let buttonColor = UIColor.rgbColor(r: 175,
+                                              g: 150,
+                                              b: 119)
 
-    static let lightTextOnBackground = UIColor.color(r: 206,
-                                                     g: 184,
-                                                     b: 162,
-                                                     a: 1)
+    static let lightTextOnBackground = UIColor.rgbColor(r: 206,
+                                                        g: 184,
+                                                        b: 162)
 
-    static let darkBrown = UIColor.color(r: 35,
-                                         g: 23,
-                                         b: 16,
-                                         a: 1)
+    static let darkBrown = UIColor.rgbColor(r: 35,
+                                            g: 23,
+                                            b: 16)
 }

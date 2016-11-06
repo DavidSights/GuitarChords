@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xa3-ap-vBM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xa3-ap-vBM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="1032.8" y="135.38230884557723"/>
         </scene>
-        <!--Chart View Controller-->
+        <!--Selection View Controller-->
         <scene sceneID="S8G-3H-raR">
             <objects>
-                <viewController id="ZKh-55-Nxp" customClass="ChartViewController" customModule="GuitarChords" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZKh-55-Nxp" customClass="SelectionViewController" customModule="GuitarChords" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nBR-zV-SO2"/>
                         <viewControllerLayoutGuide type="bottom" id="BLi-TN-p4o"/>
@@ -113,17 +113,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="P72-LC-RuW" kind="show" id="i4e-x1-kmu"/>
+                        <segue destination="P72-LC-RuW" kind="show" identifier="ChartViewControllerSegueIdentifier" id="i4e-x1-kmu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4HD-8v-g05" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1938" y="135"/>
         </scene>
-        <!--Selection View Controller-->
+        <!--Chart View Controller-->
         <scene sceneID="Pqh-UK-H0k">
             <objects>
-                <viewController id="P72-LC-RuW" customClass="SelectionViewController" customModule="ChartViewControllerSegueIdentifier" sceneMemberID="viewController">
+                <viewController id="P72-LC-RuW" customClass="ChartViewController" customModule="ChartViewControllerSegueIdentifier" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ex1-St-BV5"/>
                         <viewControllerLayoutGuide type="bottom" id="tfc-9f-klX"/>
